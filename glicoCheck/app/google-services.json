@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "37721620770",
+    "project_id": "glicocheck-85668",
+    "storage_bucket": "glicocheck-85668.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37721620770:android:d67058e02a525aaeb5657b",
+        "android_client_info": {
+          "package_name": "com.app.glicoCheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37721620770-gd9ec14fat0n3db1eo97l8sveqnfih11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.glicoCheck",
+            "certificate_hash": "e5febde41fbc498f6ab43b79656b1c7d6589fac0"
+          }
+        },
+        {
+          "client_id": "37721620770-8jmqq3vug0nkrlrvo7vo5if1hmd17ivb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNQPIIrIutqP8KtnByfuTj6DbFt4nbo88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37721620770-8jmqq3vug0nkrlrvo7vo5if1hmd17ivb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
