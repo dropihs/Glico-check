@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/background_botao.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/background_button_cadastre_se.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/background_texto.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/backgroundapp.xml" value="0.2875" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.2455" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/ic_baseline_library_books_24.xml" value="0.2455" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.2455" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/new_background.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/drawable/toolbar_header.xml" value="0.3035" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/layout/activity_cadastro.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Dropi/Documents/GitHub/Glico-check/glicoCheck/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3035" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

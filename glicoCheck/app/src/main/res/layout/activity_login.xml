@@ -12,6 +12,12 @@
     android:paddingRight="32dp"
     tools:context=".activity.LoginActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_blood_test_icon" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
