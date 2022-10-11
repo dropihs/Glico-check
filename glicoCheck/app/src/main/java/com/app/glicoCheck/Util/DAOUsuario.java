@@ -1,2 +1,20 @@
-package com.app.glicoCheck.Util;public class DAOUsuario {
+package com.app.glicoCheck.Util;
+import com.app.glicoCheck.model.GlicoseUser;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class DAOUsuario {
+    private DatabaseReference databaseReference;
+
+    public DAOUsuario(){
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        databaseReference = db.getReference(GlicoseUser.class.getSimpleName());
+    }
+
+    public Task<Void> add(GlicoseUser user){
+        //if (user == null) //throw exception
+        return databaseReference.push().setValue(user);
+    }
+
 }

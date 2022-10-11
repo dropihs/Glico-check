@@ -3,9 +3,6 @@ package com.app.glicoCheck.model;
 public class Usuario {
     private String nome,email,senha;
 
-    public Usuario() {
-    }
-
     public String getNome() {
         return nome;
     }
