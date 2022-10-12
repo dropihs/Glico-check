@@ -3,17 +3,18 @@ package com.app.glicoCheck.model;
 public class GlicoseUser {
     private String glicose, dia;
 
-    public GlicoseUser(String glicose, String dia) {
+    public GlicoseUser(String glicose, String dia, String email) {
         this.glicose = glicose;
         this.dia = dia;
+
     }
 
-    public String getGlicose() {
-        return glicose;
-    }
+        public String getGlicose() {
+            return glicose;
+        }
 
-    public void setGlicose(String glicose) {
-        this.glicose = glicose;
+        public void setGlicose(String glicose) {
+            this.glicose = glicose;
     }
 
     public String getDia() {

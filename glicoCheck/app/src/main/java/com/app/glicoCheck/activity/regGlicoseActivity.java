@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.service.autofill.UserData;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,12 +21,15 @@ public class regGlicoseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg_glicose);
-       final EditText glicose = findViewById(R.id.editTextGlicose);
-       final EditText day = findViewById(R.id.editTextDay);
+
+        Usuario usuario = new Usuario();
+        usuario.getEmail();
+        final EditText glicose = findViewById(R.id.editTextGlicose);
+        final EditText day = findViewById(R.id.editTextDay);
         Button btnRegistrar = findViewById(R.id.botaoRegistrar);
         DAOUsuario dao = new DAOUsuario();
         btnRegistrar.setOnClickListener(v->{
-            GlicoseUser user = new GlicoseUser(glicose.getText().toString(),day.getText().toString());
+            GlicoseUser user = new GlicoseUser(usuario.getEmail(),glicose.getText().toString(),day.getText().toString());
             dao.add(user).addOnSuccessListener(suc ->{
                 Toast.makeText(this, "Registrado com Sucesso", Toast.LENGTH_SHORT).show();
             });
@@ -33,6 +37,10 @@ public class regGlicoseActivity extends AppCompatActivity {
     }
     public void voltarHome(View v){
         Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
+    }
+    public void goHistGlicose(View v){
+        Intent i = new Intent(this, HistoricoGlicActivity.class);
         startActivity(i);
     }
 }
