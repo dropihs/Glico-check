@@ -93,10 +93,61 @@
                             android:textColor="@color/white"
                             android:textSize="20sp"></TextView>
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recyclerView_Glicose"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="205dp"
+                            android:layout_height="83dp">
+
+                            <TextView
+                                android:id="@+id/txtView_glicose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Glicose"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtView_Dia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="15dp"
+                                android:text="Dia"
+                                android:textSize="16sp"
+                                android:translationX="110px"
+                                android:translationY="70px"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtView_Diaglico"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="15dp"
+                                android:text="TextView"
+                                android:textSize="16sp"
+                                android:translationX="200px"
+                                android:translationY="70px"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtView_glicosenivel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="15dp"
+                                android:text="TextView"
+                                android:textSize="16sp"
+                                android:translationX="200px"
+                                android:translationY="-10px"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                     </LinearLayout>
