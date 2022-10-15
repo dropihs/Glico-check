@@ -35,4 +35,8 @@ public class regGlicoseActivity extends AppCompatActivity {
         Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
     }
+    public void goHistoricoGlicose(View v){
+        Intent i = new Intent(this, HistoricoGlicoseActivity.class);
+        startActivity(i);
+    }
 }
