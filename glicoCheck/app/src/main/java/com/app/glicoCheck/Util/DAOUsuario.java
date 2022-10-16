@@ -9,7 +9,7 @@ public class DAOUsuario {
 
     public DAOUsuario(){
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        databaseReference = db.getReference(GlicoseUser.class.getSimpleName());
+        databaseReference = db.getReference().child("Glicose");
     }
 
     public Task<Void> add(GlicoseUser user){

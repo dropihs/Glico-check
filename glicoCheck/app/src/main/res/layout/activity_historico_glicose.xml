@@ -85,6 +85,15 @@
                         android:padding="16dp">
 
 
+                        <Button
+                            android:id="@+id/botaoVoltar3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_botao"
+                            android:onClick="voltarRegGlicose"
+                            android:text="Voltar"
+                            android:textColor="@color/white" />
+
                         <ImageView
                             android:layout_width="216dp"
                             android:layout_height="167dp"
@@ -98,19 +107,15 @@
                             android:textColor="@color/white"
                             android:textSize="18sp"></TextView>
 
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerGlicose"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <Button
-                    android:id="@+id/botaoVoltar3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_botao"
-                    android:onClick="voltarRegGlicose"
-                    android:text="Voltar"
-                    android:textColor="@color/white" />
 
 
             </GridLayout>

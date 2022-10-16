@@ -7,6 +7,9 @@ public class GlicoseUser {
         this.glicose = glicose;
         this.dia = dia;
     }
+    public GlicoseUser(){
+
+    }
 
     public String getGlicose() {
         return glicose;
