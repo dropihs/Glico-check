@@ -28,73 +28,139 @@
         android:textColor="#FFFFFF"
         android:textSize="34sp" />
 
-    <EditText
-        android:id="@+id/editTextEmailLogin"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/background_texto"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
-        android:drawablePadding="6dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textWebEmailAddress|textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="#F6F0F2"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="50dp">
 
-    <EditText
-        android:id="@+id/editTextNome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/background_texto"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="6dp"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:paddingRight="6dp"
-        android:textColor="@color/white"
-        android:textColorHint="#F6F0F2"
-        tools:ignore="TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/editTextNomeCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/background_texto"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="6dp"
+            android:ems="10"
+            android:hint="Nome"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#F6F0F2"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    <EditText
-        android:id="@+id/editTextSenhaLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/background_texto"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="6dp"
-        android:ems="10"
-        android:hint="Senha"
-        android:inputType="textPersonName|textPassword"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="#F6F0F2"
-        tools:ignore="TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/editTextPesoCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/background_texto"
+            android:drawableLeft="@drawable/ic_baseline_align_vertical_bottom_24peso"
+            android:drawablePadding="6dp"
+            android:ems="10"
+            android:hint="Peso(kg)"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#F6F0F2"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    <Button
-        android:id="@+id/botaoCadastrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_botao"
-        android:onClick="validarCampos"
-        android:text="Cadastrar" />
+        <EditText
+            android:id="@+id/editTextAlturaCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/background_texto"
+            android:drawableLeft="@drawable/ic_baseline_man_24altura"
+            android:drawablePadding="6dp"
+            android:ems="10"
+            android:hint="Altura(cm)"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#F6F0F2"
+            tools:ignore="TouchTargetSizeCheck" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
-    <Button
-        android:id="@+id/botaoVoltar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_botao"
-        android:onClick="voltar"
-        android:text="Voltar"
-        android:textColor="@color/white" />
+            <RadioGroup
+                android:id="@+id/RadioGroupSexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <RadioButton
+                    android:id="@+id/RadioButtonMasculino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="Masculino" />
+
+                <RadioButton
+                    android:id="@+id/RadioButtonFeminino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feminino" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/editTextEmailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/background_texto"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="6dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textWebEmailAddress|textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#F6F0F2"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextSenhaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/background_texto"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="6dp"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPersonName|textPassword"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#F6F0F2"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/botaoCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_botao"
+            android:onClick="validarCampos"
+            android:text="Cadastrar" />
+
+        <Button
+            android:id="@+id/botaoVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_botao"
+            android:onClick="voltarLogin"
+            android:text="Voltar"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

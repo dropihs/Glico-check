@@ -21,9 +21,6 @@ public class ImcActivity extends AppCompatActivity {
     }
 
 
-
-
-
     public void calcularImc(View v){
 
 

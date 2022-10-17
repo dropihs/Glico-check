@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.app.glicoCheck.R;
 import com.app.glicoCheck.model.GlicoseUser;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +23,9 @@ import java.util.ArrayList;
 public class HistoricoGlicoseActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
-    private DatabaseReference root = db.getReference().child("Glicose");
+    private String userUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+    //alterar para Glicose dps
+    private DatabaseReference root = db.getReference().child(userUid);
     private MyAdapter adapter;
     private ArrayList<GlicoseUser> list;
 
