@@ -108,14 +108,10 @@
                             android:inputType="number"
                             android:minHeight="48dp" />
 
-                        <EditText
-                            android:id="@+id/editTextDay"
+                        <CalendarView
+                            android:id="@+id/calendarView"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:hint="Informe o dia e horario"
-                            android:inputType="number"
-                            android:minHeight="48dp" />
+                            android:layout_height="wrap_content" />
 
                         <TextView
                             android:id="@+id/textViewResultado"
