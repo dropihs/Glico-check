@@ -21,4 +21,9 @@ public class DAOUsuario {
         return databaseReference.push().setValue(user);
     }
 
+    /*public Task<Void> delete(GlicoseUser user){
+        //if (user == null) //throw exception
+        return databaseReference.delete().setValue(user);
+    }*/
+
 }

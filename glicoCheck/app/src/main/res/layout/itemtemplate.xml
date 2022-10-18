@@ -36,6 +36,15 @@
                 android:text="num_glicose"
                 android:textSize="17dp"
                 android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/iconbtncDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="75dp"
+                app:srcCompat="@drawable/ic_baseline_delete_24" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -58,6 +67,7 @@
                 android:text="diaGlicose"
                 android:textSize="17dp"
                 android:textStyle="bold"></TextView>
+
         </LinearLayout>
 
 

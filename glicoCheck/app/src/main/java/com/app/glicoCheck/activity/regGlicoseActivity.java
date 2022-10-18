@@ -36,6 +36,7 @@ public class regGlicoseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reg_glicose);
        final EditText glicose = findViewById(R.id.editTextGlicose);
       // final EditText day = findViewById(R.id.editTextDay);
+
        calendarView = (CalendarView) findViewById(R.id.calendarView);
        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
            @Override
@@ -46,7 +47,6 @@ public class regGlicoseActivity extends AppCompatActivity {
            }
        });
         Button btnRegistrar = findViewById(R.id.botaoRegistrar);
-
         DAOUsuario dao = new DAOUsuario();
         btnRegistrar.setOnClickListener(v->{
             GlicoseUser user = new GlicoseUser(glicose.getText().toString(),dateSelected);

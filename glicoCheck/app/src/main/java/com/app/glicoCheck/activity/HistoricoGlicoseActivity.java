@@ -39,6 +39,18 @@ public class HistoricoGlicoseActivity extends AppCompatActivity {
         list = new ArrayList<>();
         adapter = new MyAdapter(this,list);
         recyclerView.setAdapter(adapter);
+        //codigo delete
+        adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                //now delete
+                list.remove(position);
+                //then notify
+                adapter.notifyItemRemoved(position);
+            }
+        });
+        //fim codigo
+
         root.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -56,6 +68,7 @@ public class HistoricoGlicoseActivity extends AppCompatActivity {
         });
 
     }
+
     public void voltarRegGlicose(View v){
         Intent i = new Intent(this, regGlicoseActivity.class);
         startActivity(i);

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/new_background"
     android:onClick="voltarRegGlicose"
     tools:context=".activity.HistoricoGlicoseActivity">
@@ -18,7 +18,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
 
@@ -70,7 +70,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="350dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_margin="12dp"
                     app:cardCornerRadius="16dp"
@@ -84,15 +84,6 @@
                         android:orientation="vertical"
                         android:padding="16dp">
 
-
-                        <Button
-                            android:id="@+id/botaoVoltar3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/background_botao"
-                            android:onClick="voltarRegGlicose"
-                            android:text="Voltar"
-                            android:textColor="@color/white" />
 
                         <ImageView
                             android:layout_width="216dp"
@@ -119,6 +110,15 @@
 
 
             </GridLayout>
+
+            <Button
+                android:id="@+id/botaoVoltar3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_botao"
+                android:onClick="voltarRegGlicose"
+                android:text="Voltar"
+                android:textColor="@color/white" />
 
 
         </LinearLayout>
