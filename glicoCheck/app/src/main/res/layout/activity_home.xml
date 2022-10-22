@@ -29,40 +29,44 @@
 
             <RelativeLayout
 
-                android:layout_width="match_parent"
-                android:layout_height="129dp"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
                 android:layout_marginTop="20dp">
 
-                <ImageView
-                    android:id="@+id/menu"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:contentDescription="Menu"></ImageView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/txtUsername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/menu"
-                    android:paddingLeft="10dp"
-                    android:text="Ola Fulano"
-                    android:textColor="@color/white"
-                    android:textSize="25sp">
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_blood_test_icon" />
 
-                </TextView>
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="clip_horizontal|center|clip_vertical"
+                        android:text="@string/glico_check"
+                        android:textColor="#FFFFFF"
+                        android:textSize="34sp" />
 
-                <androidx.appcompat.widget.SearchView
-                    android:layout_width="600dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@+id/menu"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/backgroundapp"
-                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/txtUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Ola Fulano"
+                        android:textColor="@color/white"
+                        android:textSize="25sp">
 
-                </androidx.appcompat.widget.SearchView>
+                    </TextView>
+                </LinearLayout>
+
             </RelativeLayout>
 
             <GridLayout
@@ -77,6 +81,7 @@
                 android:rowCount="1">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/perfilCard"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -111,6 +116,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/registrarGlicoseCard"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -124,7 +130,6 @@
                         android:layout_height="match_parent"
                         android:background="@color/cardCollor"
                         android:gravity="center"
-                        android:onClick="goRegGlicose"
                         android:orientation="vertical"
                         android:padding="16dp">
 
@@ -132,7 +137,7 @@
                         <ImageView
                             android:layout_width="120dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_baseline_face_24"></ImageView>
+                            android:src="@drawable/ic_baseline_fact_check_24regnivelglicose"></ImageView>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -146,6 +151,42 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/lembreteInsulinaCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:onClick="goLembreteInsulina"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/cardCollor"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_baseline_alarm_24insulimalarm"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Lembrete Insulina"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"></TextView>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/calcularImcCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -179,6 +220,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/calcularBfCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -212,41 +254,8 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="12dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-
-                        android:background="@color/cardCollor"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <ImageView
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/ic_baseline_room_preferences_24"></ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="Configuracoes"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"></TextView>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                    android:id="@+id/logoutCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
