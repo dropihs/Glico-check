@@ -83,13 +83,10 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
-
-
                         <ImageView
                             android:layout_width="216dp"
                             android:layout_height="167dp"
                             android:src="@drawable/ic_baseline_alarm_24insulimalarm"></ImageView>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -97,7 +94,6 @@
                             android:text="lembrete de insulina"
                             android:textColor="@color/white"
                             android:textSize="18sp"></TextView>
-
                         <!--Added Time picker just to pick the alarm time-->
                         <!--gravity is aligned to center-->
                         <TimePicker
@@ -118,14 +114,6 @@
                             android:layout_margin="20dp"
                             android:checked="false"
                             android:onClick="OnToggleClicked" />
-
-                        <Button
-                            android:id="@+id/botaoRegistrar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/background_botao"
-                            android:text="Calcular" />
-
 
 
                     </LinearLayout>
