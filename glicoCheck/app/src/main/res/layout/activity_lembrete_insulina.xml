@@ -1,166 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/new_background"
-    android:onClick="voltarHome"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.LembreteInsulinaActivity">
 
-    <androidx.appcompat.widget.Toolbar
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="@drawable/toolbar_header"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectedTime"
+        android:layout_marginTop="200dp"
+        android:text="08 : 45 PM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="46dp"/>
 
-        ></androidx.appcompat.widget.Toolbar>
 
-    <ScrollView
+    <Button
+        android:id="@+id/selectTimeBtn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="70dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="26dp"
+        android:text="Select Time"
+        android:textSize="26dp"/>
 
-        <LinearLayout
+    <Button
+        android:id="@+id/setAlarmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="26dp"
+        android:text="Set Alarm"
+        android:textSize="26dp"/>
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/cancelAlarmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="26dp"
+        android:text="Cancel Alarm"
+        android:textSize="26dp"/>
 
-            <RelativeLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="129dp"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="clip_horizontal|center|clip_vertical"
-                    android:text="@string/glico_check"
-                    android:textColor="#FFFFFF"
-                    android:textSize="34sp" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="116dp"
-                    android:layout_height="70dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="129dp"
-                    android:layout_marginEnd="126dp"
-                    android:layout_marginBottom="9dp"
-                    app:srcCompat="@drawable/ic_blood_test_icon" />
-
-            </RelativeLayout>
-
-            <GridLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:alignmentMode="alignMargins"
-                android:columnCount="1"
-                android:columnOrderPreserved="true"
-                android:foregroundGravity="center"
-                android:rowCount="1">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="12dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/cardCollor"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-                        <ImageView
-                            android:layout_width="216dp"
-                            android:layout_height="167dp"
-                            android:src="@drawable/ic_baseline_alarm_24insulimalarm"></ImageView>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="lembrete de insulina"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"></TextView>
-                        <!--Added Time picker just to pick the alarm time-->
-                        <!--gravity is aligned to center-->
-                        <TimePicker
-                            android:id="@+id/timePicker"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:numbersBackgroundColor="@color/cardCollor"/>
-
-                        <!--Added Toggle Button to set the alarm on or off-->
-                        <!--ByDefault toggleButton is set to false-->
-                        <ToggleButton
-
-                            android:id="@+id/toggleButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:checked="false"
-                            android:onClick="OnToggleClicked" />
-
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <Button
-                    android:id="@+id/botaoVoltar3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_botao"
-                    android:onClick="voltarHome"
-                    android:text="Voltar"
-                    android:textColor="@color/white" />
-
-
-            </GridLayout>
-
-
-        </LinearLayout>
-
-    </ScrollView>
-
-
-    <!--
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_blood_test_icon"
-            tools:layout_editor_absoluteX="-16dp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="deslogar"
-            android:text="Deslogar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.868" />
-
-    !-->
-</RelativeLayout>
+</LinearLayout>
