@@ -100,7 +100,7 @@
                             android:textSize="18sp"></TextView>
 
                         <EditText
-                            android:id="@+id/editTextNumberPeso"
+                            android:id="@+id/edtTextPesoBf"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
@@ -109,7 +109,7 @@
                             android:minHeight="48dp" />
 
                         <EditText
-                            android:id="@+id/editTextNumberAltura"
+                            android:id="@+id/edtTextAlturaBf"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:ems="10"

@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/new_background"
     android:onClick="voltarHome"
+    android:textAlignment="center"
     tools:context=".activity.BfActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -98,20 +99,30 @@
                             android:textColor="@color/white"
                             android:textSize="18sp"></TextView>
 
-                        <RadioButton
-                            android:id="@+id/radioBtnMasculino"
-                            android:layout_width="141dp"
-                            android:layout_height="wrap_content"
-                            android:text="Masculino" />
+                        <RadioGroup
+                            android:id="@+id/RadiogroupBf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:textAlignment="center"
+                            android:visibility="visible">
 
-                        <RadioButton
-                            android:id="@+id/radioBtnFeminino"
-                            android:layout_width="141dp"
-                            android:layout_height="wrap_content"
-                            android:text="Feminino" />
+                            <RadioButton
+                                android:id="@+id/radioBtnMasculino"
+                                android:layout_width="141dp"
+                                android:layout_height="wrap_content"
+                                android:text="Masculino" />
+
+                            <RadioButton
+                                android:id="@+id/radioBtnFeminino"
+                                android:layout_width="141dp"
+                                android:layout_height="wrap_content"
+                                android:text="Feminino" />
+                        </RadioGroup>
 
                         <EditText
-                            android:id="@+id/editTextNumberIdade"
+                            android:id="@+id/edtTextIdadeBf"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
@@ -120,7 +131,7 @@
                             android:minHeight="48dp" />
 
                         <EditText
-                            android:id="@+id/editTextNumberPeso"
+                            android:id="@+id/edtTextPesoBf"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
@@ -129,23 +140,25 @@
                             android:minHeight="48dp" />
 
                         <EditText
-                            android:id="@+id/editTextNumberAltura"
+                            android:id="@+id/edtTextAlturaBf"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:hint="Informe sua altura (cm)"
                             android:inputType="number"
                             android:minHeight="48dp" />
+
                         <EditText
-                            android:id="@+id/editTextNumberpescoco"
+                            android:id="@+id/edtTextPescocoBf"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:hint="Circferencia pescoço"
                             android:inputType="number"
                             android:minHeight="48dp" />
+
                         <EditText
-                            android:id="@+id/editTextNumbercintura"
+                            android:id="@+id/edtTextCinturaBf"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
@@ -164,7 +177,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/background_botao"
-                            android:onClick=""
+                            android:onClick="calcularBf"
                             android:text="Calcular" />
 
 

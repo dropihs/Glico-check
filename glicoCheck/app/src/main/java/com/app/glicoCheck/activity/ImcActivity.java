@@ -20,8 +20,8 @@ public class ImcActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imc);
-        height = (EditText) findViewById(R.id.editTextNumberAltura);
-        weight = (EditText) findViewById(R.id.editTextNumberPeso);
+        height = (EditText) findViewById(R.id.edtTextAlturaBf);
+        weight = (EditText) findViewById(R.id.edtTextPesoBf);
         result = (TextView) findViewById(R.id.textViewResultado);
     }
 
