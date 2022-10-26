@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/new_background"
     android:onClick="voltarHome"
+
     tools:context=".activity.ImcActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -100,33 +101,34 @@
 
                         <EditText
                             android:id="@+id/editTextNumberPeso"
-                            android:layout_width="match_parent"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="Informe seu peso (kg)"
+                            android:hint="peso (kg)"
                             android:inputType="number"
                             android:minHeight="48dp" />
 
                         <EditText
                             android:id="@+id/editTextNumberAltura"
-                            android:layout_width="match_parent"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="Informe sua altura (cm)"
+                            android:hint="altura (cm)"
                             android:inputType="number"
                             android:minHeight="48dp" />
 
                         <TextView
                             android:id="@+id/textViewResultado"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="60dp"
+                            android:textAlignment="center"
+                            android:textSize="16dp" />
 
                         <Button
-                            android:id="@+id/botaoRegistrar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/background_botao"
-                            android:onClick="calcularImc"
+                            android:onClick="calculateBMI"
                             android:text="Calcular" />
 
 

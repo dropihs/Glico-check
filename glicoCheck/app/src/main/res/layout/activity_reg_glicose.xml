@@ -114,12 +114,12 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:id="@+id/textViewResultado"
+                            android:id="@+id/txtViewNivelImc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                         <Button
-                            android:id="@+id/botaoRegistrar"
+                            android:id="@+id/botaoCalcularImc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/background_botao"

@@ -1,12 +1,9 @@
 package com.app.glicoCheck.activity;
 
-import static android.content.ContentValues.TAG;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,12 +15,6 @@ import android.widget.Toast;
 import com.app.glicoCheck.R;
 import com.app.glicoCheck.Util.DAOUsuario;
 import com.app.glicoCheck.model.GlicoseUser;
-import com.app.glicoCheck.model.Usuario;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 public class regGlicoseActivity extends AppCompatActivity {
     CalendarView calendarView;
@@ -46,7 +37,7 @@ public class regGlicoseActivity extends AppCompatActivity {
                dateSelected = date;
            }
        });
-        Button btnRegistrar = findViewById(R.id.botaoRegistrar);
+        Button btnRegistrar = findViewById(R.id.botaoCalcularImc);
         DAOUsuario dao = new DAOUsuario();
         btnRegistrar.setOnClickListener(v->{
             GlicoseUser user = new GlicoseUser(glicose.getText().toString(),dateSelected);

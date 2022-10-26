@@ -2,4 +2,13 @@
     <string name="app_name">Glico Check</string>
     <string name="glico_check">Glico Check</string>
     <string name="channedId">foxandroid</string>
+
+    <string name="very_severely_underweight">Very severely underweight</string>
+    <string name="severely_underweight">Severely underweight</string>
+    <string name="underweight">underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Obese class I</string>
+    <string name="obese_class_ii">Obese class II</string>
+    <string name="obese_class_iii">Obese class III</string>
 </resources>
