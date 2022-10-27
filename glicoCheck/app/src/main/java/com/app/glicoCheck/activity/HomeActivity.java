@@ -92,6 +92,11 @@ public class HomeActivity extends AppCompatActivity {
         Intent i = new Intent(this, LembreteInsulinaActivity.class);
         startActivity(i);
     }
+    public void goTMB(View v){
+        Intent i = new Intent(this, TMBActivity.class);
+        startActivity(i);
+    }
+
 
 
 

@@ -117,7 +117,7 @@
 
                                 <TextView
                                     android:id="@+id/txtNomeUser"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="10sp"
                                     android:text="diaGlicose"
@@ -141,7 +141,7 @@
 
                                 <TextView
                                     android:id="@+id/txtEmailUser"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="10sp"
                                     android:text="diaGlicose"
@@ -165,7 +165,7 @@
 
                                 <TextView
                                     android:id="@+id/txtPesoUser"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="10sp"
                                     android:text="diaGlicose"
@@ -189,7 +189,7 @@
 
                                 <TextView
                                     android:id="@+id/txtSexoUser"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="10sp"
                                     android:text="num_glicose"
@@ -213,7 +213,7 @@
 
                                 <TextView
                                     android:id="@+id/txtAlturaUser"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="10sp"
                                     android:text="diaGlicose"

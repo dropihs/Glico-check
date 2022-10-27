@@ -38,7 +38,7 @@ public class BfActivity extends AppCompatActivity {
         pescoco = (EditText) findViewById(R.id.edtTextPescocoBf);
         idade = (EditText) findViewById(R.id.edtTextIdadeBf);
         radioGroupBf = findViewById(R.id.RadiogroupBf);
-        result = findViewById(R.id.txtViewResultadoBf);
+        result = findViewById(R.id.txtViewResultadoTMB);
         textoPercentual = findViewById(R.id.txtViewPercentual);
         textoPercentual.setVisibility(View.GONE);
 
@@ -52,7 +52,7 @@ public class BfActivity extends AppCompatActivity {
                         break;
                     case R.id.radioBtnFeminino:
                         quadril.setText(null);
-                        quadril.setHint("Circuferencia do quadril");
+                        quadril.setHint("Quadril(cm)");
                         quadril.setVisibility(View.VISIBLE);
                         break;
                 }

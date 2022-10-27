@@ -68,7 +68,7 @@
                 android:rowCount="1">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="12dp"
@@ -87,34 +87,36 @@
                         <ImageView
                             android:layout_width="216dp"
                             android:layout_height="167dp"
-                            android:src="@drawable/ic_baseline_fact_check_24regnivelglicose">
-                        </ImageView>
+                            android:src="@drawable/ic_baseline_fact_check_24regnivelglicose"></ImageView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
                             android:text="Registrar nível de glicose "
                             android:textColor="@color/white"
-                            android:textSize="18sp">
-                        </TextView>
+                            android:textSize="18sp"></TextView>
 
                         <EditText
                             android:id="@+id/editTextGlicose"
-                            android:layout_width="match_parent"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/background_botao"
                             android:ems="10"
+                            android:gravity="center"
                             android:hint="Informe sua glicose"
                             android:inputType="number"
                             android:minHeight="48dp" />
 
                         <CalendarView
                             android:id="@+id/calendarView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="350dp"
+                            android:layout_height="300dp" />
 
                         <TextView
-                            android:id="@+id/txtViewResultadoBf"
+                            android:id="@+id/txtViewResultadoTMB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 

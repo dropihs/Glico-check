@@ -8,7 +8,7 @@
     android:background="@drawable/new_background"
     android:onClick="voltarHome"
     android:textAlignment="center"
-    tools:context=".activity.BfActivity">
+    tools:context=".activity.TMBActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -89,18 +89,19 @@
                         <ImageView
                             android:layout_width="216dp"
                             android:layout_height="167dp"
-                            android:src="@drawable/tapemeasureicon"></ImageView>
+                            android:src="@drawable/metabolismicon"></ImageView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="Percentual de gordura corporal"
+                            android:layout_marginBottom="12dp"
+                            android:text="Metabolismo basal"
                             android:textColor="@color/white"
                             android:textSize="18sp"></TextView>
 
                         <RadioGroup
-                            android:id="@+id/RadiogroupBf"
+                            android:id="@+id/RadiogroupTMB"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -109,22 +110,23 @@
                             android:visibility="visible">
 
                             <RadioButton
-                                android:id="@+id/radioBtnMasculino"
+                                android:id="@+id/radioBtnMasculinoTMB"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Masculino" />
 
                             <RadioButton
-                                android:id="@+id/radioBtnFeminino"
+                                android:id="@+id/radioBtnFemininoTMB"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Feminino" />
                         </RadioGroup>
 
                         <EditText
-                            android:id="@+id/edtTextIdadeBf"
-                            android:layout_width="150dp"
+                            android:id="@+id/edtTextIdadeTMB"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginBottom="8dp"
                             android:background="@drawable/background_texto"
                             android:ems="10"
@@ -134,9 +136,10 @@
                             android:minHeight="48dp" />
 
                         <EditText
-                            android:id="@+id/edtTextPesoBf"
-                            android:layout_width="150dp"
+                            android:id="@+id/edtTextPesoBfTMB"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginBottom="8dp"
                             android:background="@drawable/background_texto"
                             android:ems="10"
@@ -146,8 +149,8 @@
                             android:minHeight="48dp" />
 
                         <EditText
-                            android:id="@+id/edtTextAlturaBf"
-                            android:layout_width="150dp"
+                            android:id="@+id/edtTextAlturaTMB"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:background="@drawable/background_texto"
@@ -157,39 +160,13 @@
                             android:inputType="number"
                             android:minHeight="48dp" />
 
-                        <EditText
-                            android:id="@+id/edtTextPescocoBf"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:background="@drawable/background_texto"
-                            android:ems="10"
-                            android:gravity="center"
-                            android:hint="Pescoço(cm)"
-                            android:inputType="number"
-                            android:minHeight="48dp" />
-
-                        <EditText
-                            android:id="@+id/edtTextCinturaBf"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/background_texto"
-                            android:ems="10"
-                            android:gravity="center"
-                            android:hint="Cintura(cm)"
-                            android:inputType="number"
-                            android:minHeight="48dp" />
-
 
                         <EditText
                             android:id="@+id/edtTextQuadrilBf"
-                            android:layout_width="150dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:background="@drawable/background_texto"
                             android:ems="10"
-                            android:gravity="center"
-                            android:hint="Quadril(cm)"
+                            android:hint="Circferencia quadril(apenas mulheres)"
                             android:inputType="number"
                             android:minHeight="48dp"
                             android:visibility="gone" />
@@ -203,20 +180,47 @@
                             android:textSize="25sp"
                             android:visibility="gone" />
 
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:paddingLeft="5dp"
+                            android:text="nível de atividade física" />
+
+                        <Spinner
+                            android:id="@+id/spinner1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:spinnerMode="dropdown"
+                            android:textColor="#FFFFFF" />
+
                         <TextView
                             android:id="@+id/txtViewResultadoTMB"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:textAlignment="center"
                             android:textSize="25sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txtViewResultadoTMBAtividade"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
 
                         <Button
-                            android:id="@+id/botaoCalcularImc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/background_botao"
-                            android:onClick="calcularBf"
+                            android:onClick="CalcularTMB"
                             android:text="Calcular" />
 
 
@@ -232,8 +236,6 @@
                     android:onClick="voltarHome"
                     android:text="Voltar"
                     android:textColor="@color/white" />
-
-
             </GridLayout>
 
 
@@ -241,30 +243,4 @@
 
     </ScrollView>
 
-
-    <!--
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_blood_test_icon"
-            tools:layout_editor_absoluteX="-16dp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="deslogar"
-            android:text="Deslogar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.868" />
-
-    !-->
 </RelativeLayout>
