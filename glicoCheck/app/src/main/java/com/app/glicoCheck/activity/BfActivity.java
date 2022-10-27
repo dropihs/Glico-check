@@ -1,6 +1,5 @@
 package com.app.glicoCheck.activity;
 
-import static java.lang.Math.log;
 import static java.lang.Math.log10;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,10 +23,7 @@ public class BfActivity extends AppCompatActivity {
     private EditText idade;
     private RadioButton radioButton;
     private RadioGroup radioGroupBf;
-
-
-
-
+    private TextView textoPercentual;
     private TextView result;
 
 
@@ -38,14 +34,32 @@ public class BfActivity extends AppCompatActivity {
         altura = (EditText) findViewById(R.id.edtTextAlturaBf);
         peso = (EditText) findViewById(R.id.edtTextPesoBf);
         cintura = (EditText) findViewById(R.id.edtTextCinturaBf);
-        quadril = (EditText) findViewById(R.id.edtTextPesoBf);
+        quadril = (EditText) findViewById(R.id.edtTextQuadrilBf);
         pescoco = (EditText) findViewById(R.id.edtTextPescocoBf);
         idade = (EditText) findViewById(R.id.edtTextIdadeBf);
         radioGroupBf = findViewById(R.id.RadiogroupBf);
-        int radioId = radioGroupBf.getCheckedRadioButtonId();
+        result = findViewById(R.id.txtViewResultadoBf);
+        textoPercentual = findViewById(R.id.txtViewPercentual);
+        textoPercentual.setVisibility(View.GONE);
+
+        radioGroupBf.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i){
+                    case R.id.radioBtnMasculino:
+                        quadril.setVisibility(View.GONE);
+                        quadril.setText("0");
+                        break;
+                    case R.id.radioBtnFeminino:
+                        quadril.setText(null);
+                        quadril.setHint("Circuferencia do quadril");
+                        quadril.setVisibility(View.VISIBLE);
+                        break;
+                }
+            }
+        });
+
     }
-
-
 
     public void calcularBf(View v) {
         //Get Strings from inputs
@@ -82,19 +96,31 @@ public class BfActivity extends AppCompatActivity {
                     "\nCintura: " + cinturaValor + "\nQuadril : " + quadrilValor + "\nPescoco: " +
                     pescocoValor + "\nidade: " + idadeValor);
 
-            float bf = (float) (494 / (1.0324 - 0.19077 * log10(cinturaValor - pescocoValor) + 0.15456 * log10(alturaValor)) - 450);
-            System.out.println("Resultado bf Homem: " + bf);
-
-
+            if (sexo.equals("Masculino")){
+                float bf = (float) (494 / (1.0324 - 0.19077 * log10(cinturaValor - pescocoValor) + 0.15456 * log10(alturaValor)) - 450);
+                System.out.println("Resultado bf Homem: " + bf);
+                displayBf(bf);
+            }
+            else{
+                float bf = (float) (494 / (1.29579 - 0.35004 * log10(cinturaValor + quadrilValor - pescocoValor) + 0.22100 * log10(alturaValor)) - 450);
+                System.out.println("Resultado bf Mulher: " + bf);
+                displayBf(bf);
+            }
         }
     }
+
+    private void displayBf(float bf) {
+        textoPercentual.setVisibility(View.VISIBLE);
+        result.setText("%" + (int) bf);
+    }
+
+
 
     public String checkRadioGroupSexo(View v){
         int radioId = radioGroupBf.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
         return radioButton.getText().toString();
     }
-
 
     public void voltarHome(View v){
         Intent i = new Intent(this, HomeActivity.class);

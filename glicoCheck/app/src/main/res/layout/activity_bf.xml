@@ -167,10 +167,32 @@
                             android:minHeight="48dp" />
 
 
-                        <TextView
-                            android:id="@+id/txtViewNivelImc"
+                        <EditText
+                            android:id="@+id/edtTextQuadrilBf"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Circferencia quadril(apenas mulheres)"
+                            android:inputType="number"
+                            android:minHeight="48dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txtViewPercentual"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Percentual de gordura"
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txtViewResultadoBf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
 
                         <Button
                             android:id="@+id/botaoCalcularImc"
